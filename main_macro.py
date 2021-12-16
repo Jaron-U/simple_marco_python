@@ -97,8 +97,7 @@ def dataCheck(sheet):
     return checkCmd
 
 if __name__ == '__main__':
-    choice = input("Please input a number, 1: Open bilibili, 2: connect VPN: ")
-    df = pd.read_excel('cmd.xlsx', sheet_name='Sheet1'+choice)
+    df = pd.read_excel('cmd.xlsx', sheet_name='Sheet1')
     checkCmd = dataCheck(df)
     if checkCmd:
         run_macro(df);
